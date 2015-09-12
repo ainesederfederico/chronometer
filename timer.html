@@ -1,0 +1,32 @@
+
+<!doctype html>
+<html>
+  <head>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/timer.js"></script>
+    <style media="screen">
+      #timer{
+        font-family: "Arial";
+        font-weight: bold;
+        color: #EB8904;
+        display: inline;
+        padding: 5px 10px 5px 10px;
+        -moz-border-radius:5px;
+        -webkit-border-radius:5px;
+        border-radius:5px;
+        border: 1px solid;
+        background: rgb(1, 1, 1);
+        background: rgba(1, 1, 1, .8);
+        width: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id='timer'></div>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        TIMER.init($('#timer'),function(){console.log('onEndCallback');}).start(3600);
+      });
+    </script>
+  </body>
+</html>
